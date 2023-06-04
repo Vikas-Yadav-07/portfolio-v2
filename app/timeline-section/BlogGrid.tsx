@@ -15,10 +15,10 @@ const Blog = () => {
           title={"Education & Expiriences"}
           style={`flex  flex-col items-start text-left  text-[86px] ${monaSans.className} font-extrabold uppercase leading-[6rem] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center sm:text-[10px] md:text-[20px] lg:text-center  lg:text-[100px]`}
         />
-        <AnimatedBody
-          text="I write articles to reinforce my knowledge and help out others who might be building something similar."
+        {/* <AnimatedBody
+          text="Proficient in P."
           className="w-[90%] text-center text-[14px] font-semibold uppercase sm:w-[500px] md:w-[550px] md:text-[16px]"
-        />
+        /> */}
       </div>
       <div className="container p-4">
         <ol
