@@ -13,13 +13,13 @@ const Footer = () => {
         <AnimatedBody text={"Copyright 2023"} className={"m-0 p-0"} />
         <div className="flex flex-col sm:flex-row  sm:gap-1 md:gap-2">
           <AnimatedBody
-            text={"Design & Development by"}
+            text={"Development by"}
             className={"m-0 p-0"}
           />
           <Link
             href="https://github.com/Vikas-Yadav-07"
             target="_blank"
-            aria-label="Victor's GitHub Profile"
+            aria-label="Vikas's GitHub Profile"
           >
             <span className="underline underline-offset-2 hover:no-underline">
               <AnimatedBody text={"Vikas Yadav"} className={"m-0 p-0"} />
