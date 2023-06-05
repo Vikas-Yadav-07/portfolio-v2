@@ -42,14 +42,14 @@ export const metadata: Metadata = {
       "Frontend Engineer, React JS developer based in Chandigarh India.",
     url: "https://www.vikasonweb.netlify.app/",
     siteName: "www.vikasonweb.netlify.app",
-    images: [
-      {
-        url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
-        width: 1200,
-        height: 630,
-        alt: "Vikas Yadav — Frontend Engineer",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://user-images.githubusercontent.com/84178696/228620835-e3cc5c9b-72fc-4f54-a628-407ef7b650f5.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "Vikas Yadav — Frontend Engineer",
+    //   },
+    // ],
     locale: "en-US",
     type: "website",
   },
