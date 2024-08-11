@@ -17,7 +17,7 @@ export const devProjects = [
       "A social learning platform focused on Corporate & individual growth.",
     technologies: ["NextJS", "GSAP", "Strapi"],
     demo: "https://tigerhall.com/",
-    image: require(".//../../public/projects/tigerhall.avif"),
+    image: require(".//../../public/projects/tigerhall.webp"),
     available: true,
   },
   {
