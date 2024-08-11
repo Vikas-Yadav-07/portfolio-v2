@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { preLoaderAnim } from "./loader";
 import "./preloader.css";
-import AnimatedBody from "../AnimatedBody";
 
 const PreLoader = () => {
   useEffect(() => {

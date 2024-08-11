@@ -11,6 +11,27 @@ export type ProjectProps = {
 
 export const devProjects = [
   {
+    id: 1,
+    name: "Tigerhall",
+    description:
+      "A social learning platform focused on Corporate & individual growth.",
+    technologies: ["NextJS", "GSAP", "Strapi"],
+    demo: "https://tigerhall.com/",
+    image: require(".//../../public/projects/tigerhall.avif"),
+    available: true,
+  },
+  {
+    id: 2,
+    name: "VianlixUi",
+    description:
+      "A side project where I add resusable animation components that you can copy paste to your projects",
+    technologies: ["NextJS", "GSAP", "Strapi"],
+    demo: "https://vianlix.com/",
+    github: "https://github.com/pixelftw/VianlixUi",
+    image: require(".//../../public/projects/vianlix.webp"),
+    available: true,
+  },
+  {
     id: 3,
     name: "Daze MGMT",
     description:
@@ -21,17 +42,17 @@ export const devProjects = [
     available: true,
   },
   {
-    id: 1,
-    name: "GLD",
+    id: 4,
+    name: "Daze MGMT",
     description:
-      "GLD is an admin panel for managing Real estate projects, suppliers and clients.",
-    technologies: ["NextJs", 'Graphql', 'NestJS'],
-    demo: "https://gld2.dev2.fletrix.hk/",
-    image: require(".//../../public/projects/gld.webp"),
+      "A website where users can book infuencers for there buisness advertisements",
+    technologies: ["NextJS", "GSAP", "Strapi"],
+    demo: "https://daze-mgmt.com/",
+    image: require(".//../../public/projects/dazeMGMT.webp"),
     available: true,
   },
   {
-    id: 2,
+    id: 5,
     name: "Ai image genration whatapp bot",
     description:
       "It was a fun project made for expiriencing the open ai Dalle api",
@@ -40,7 +61,6 @@ export const devProjects = [
     image: require(".//../../public/projects/whatsappbot.webp"),
     available: true,
   },
-
 ];
 
 export const designProjects = [

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation, motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 type AnimatedTitleProps = {
@@ -16,9 +16,7 @@ export default function AnimatedTitle({
   wordSpace,
   charSpace,
 }: AnimatedTitleProps) {
-  //   const text = "Animated Text"; // This would normally be passed into this component as a prop!
-
-  const ctrls = useAnimation();
+  const controls = useAnimation();
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -27,19 +25,19 @@ export default function AnimatedTitle({
 
   useEffect(() => {
     if (inView) {
-      ctrls.start("visible");
+      controls.start("visible");
     }
     if (!inView) {
-      ctrls.start("hidden");
+      controls.start("hidden");
     }
-  }, [ctrls, inView]);
+  }, [controls, inView]);
 
   const wordAnimation = {
     hidden: {},
     visible: {},
   };
 
-  const characterAnimation = {
+  const characterAnimation: Variants = {
     hidden: {
       opacity: 0,
       y: `0.25em`,
@@ -48,8 +46,9 @@ export default function AnimatedTitle({
       opacity: 1,
       y: `0em`,
       transition: {
-        duration: 1,
+        duration: 0.3,
         ease: [0.2, 0.65, 0.3, 0.9],
+        stiffness: 600,
       },
     },
   };
@@ -63,7 +62,7 @@ export default function AnimatedTitle({
             aria-hidden="true"
             key={index}
             initial="hidden"
-            animate={ctrls}
+            animate={controls}
             variants={wordAnimation}
             transition={{
               delayChildren: index * 0.25,
