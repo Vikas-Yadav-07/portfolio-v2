@@ -12,12 +12,8 @@ type AnimatedBodyProps = {
 export default function AnimatedBody({
   text,
   className,
-  wordSpace,
-  charSpace,
-}: AnimatedBodyProps) {
-  //   const text = "Animated Text"; // This would normally be passed into this component as a prop!
-
-  const ctrls = useAnimation();
+}: Readonly<AnimatedBodyProps>) {
+  const controls = useAnimation();
 
   const { ref, inView } = useInView({
     threshold: 0.1,
@@ -26,17 +22,12 @@ export default function AnimatedBody({
 
   useEffect(() => {
     if (inView) {
-      ctrls.start("visible");
+      controls.start("visible");
     }
     if (!inView) {
-      ctrls.start("hidden");
+      controls.start("hidden");
     }
-  }, [ctrls, inView]);
-
-  const wordAnimation = {
-    hidden: {},
-    visible: {},
-  };
+  }, [controls, inView]);
 
   const bodyAnimation = {
     hidden: {
@@ -48,7 +39,7 @@ export default function AnimatedBody({
       y: `0em`,
       transition: {
         delay: 0.1,
-        duration: 1,
+        duration: 0.6,
         ease: [0.2, 0.65, 0.3, 0.9],
       },
     },
@@ -62,7 +53,7 @@ export default function AnimatedBody({
       ref={ref}
       aria-hidden="true"
       initial="hidden"
-      animate={ctrls}
+      animate={controls}
       variants={bodyAnimation}
     >
       {text}

@@ -12,17 +12,14 @@ const Footer = () => {
       <motion.div className="mx-auto flex w-[90%] flex-row items-center justify-between text-center text-[12px] text-[#e4ded7] sm:text-[12px] md:text-[14px] lg:max-w-[1440px] lg:text-[14px]">
         <AnimatedBody text={"Copyright 2023"} className={"m-0 p-0"} />
         <div className="flex flex-col sm:flex-row  sm:gap-1 md:gap-2">
-          <AnimatedBody
-            text={"Development by"}
-            className={"m-0 p-0"}
-          />
+          <AnimatedBody text={"Checkout"} className={"m-0 p-0"} />
           <Link
-            href="https://github.com/Vikas-Yadav-07"
+            href="https://github.com/pixelftw"
             target="_blank"
             aria-label="Vikas's GitHub Profile"
           >
             <span className="underline underline-offset-2 hover:no-underline">
-              <AnimatedBody text={"Vikas Yadav"} className={"m-0 p-0"} />
+              <AnimatedBody text={"Github"} className={"m-0 p-0"} />
             </span>{" "}
           </Link>
         </div>

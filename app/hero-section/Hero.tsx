@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Image from "next/image";
 import { monaSans } from "../fonts/monaSans";
 import { motion } from "framer-motion";
-import { imageAnimation, bodyAnimation } from "../animations/animations";
+import { bodyAnimation } from "../animations/animations";
 import AnimatedWords from "../animations/AnimatedWords";
-import '../animations/animate.css'
+import "../animations/animate.css";
+
 const Hero = () => {
   return (
     <motion.section
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute top-10 flex justify-between sm:w-[90%] lg:max-w-[1440px]">
         <div>
           <Link
-            href="https://drive.google.com/file/d/1kS_LxnyokohfGDjjvsv4QnPjOHDqV1PI/view?usp=sharing"
+            href="https://drive.google.com/file/d/1OygmWn0lzU8Udr3ovcv4dxenh9pHg1bJ/view?usp=sharing"
             target="_blank"
             aria-label="View Resume"
           >
@@ -63,10 +63,7 @@ const Hero = () => {
         <div
           className={`relative flex flex-col items-center justify-center ${monaSans.className}  mt-20 `}
         >
-          <AnimatedWords
-            title="Vikas Yadav"
-            style="mt-4 gradient-text"
-          />
+          <AnimatedWords title="Vikas Yadav" style="mt-4 gradient-text" />
         </div>
       </div>
 
@@ -79,14 +76,15 @@ const Hero = () => {
           className="  max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
           variants={bodyAnimation}
         >
-          <p className="z-50 text-center text-[16px] font-medium text-[#e4ded7] md:text-[20px] lg:text-left">
-            Frontend Engineer, currently working at{" "}
+          <p className="text-left text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
+            Currently building animated components that developers can use in
+            there React apps{" "}
             <Link
-              href="https://zestgeek.com/ "
+              href="https://vianlix.com/ "
               target="_blank"
               className="underline underline-offset-2 hover:no-underline"
             >
-              ZestGeek Solutions Pvt Ltd.
+              Vianlix{" "}
             </Link>
           </p>
         </motion.div>
@@ -96,7 +94,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
-            Focused on problem solving and experiences, working on site in Mohali, Punjab.
+            Frontend Developer who loves building performant user experiences
           </p>
         </motion.div>
       </div>
