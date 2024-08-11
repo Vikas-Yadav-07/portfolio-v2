@@ -7,6 +7,8 @@ import { initialBlobityOptions } from "./utils/BlobityConfig";
 import NavBar from "./navbar/NavBar";
 
 import dynamic from "next/dynamic";
+import Lenis from "@studio-freight/lenis";
+import { cubicBezier } from "framer-motion";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
@@ -27,6 +29,22 @@ export default function Home() {
       top: 0,
       left: 0,
     });
+
+    const lenis = new Lenis({
+      easing: cubicBezier(1, 0.1, 0.1, 0.2),
+      lerp: 1,
+    });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    const animationFrame = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
 
   return (

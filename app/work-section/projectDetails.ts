@@ -15,7 +15,7 @@ export const devProjects = [
     name: "Tigerhall",
     description:
       "A social learning platform focused on Corporate & individual growth.",
-    technologies: ["NextJS", "GSAP", "Strapi"],
+    technologies: ["NextJS", "Typescript", "Turborepo"],
     demo: "https://tigerhall.com/",
     image: require(".//../../public/projects/tigerhall.webp"),
     available: true,
@@ -25,7 +25,7 @@ export const devProjects = [
     name: "VianlixUi",
     description:
       "A side project where I add resusable animation components that you can copy paste to your projects",
-    technologies: ["NextJS", "GSAP", "Strapi"],
+    technologies: ["NextJS", "Framer-motion", "TailwindCSS"],
     demo: "https://vianlix.com/",
     github: "https://github.com/pixelftw/VianlixUi",
     image: require(".//../../public/projects/vianlix.webp"),
@@ -42,6 +42,16 @@ export const devProjects = [
     available: true,
   },
   {
+    id: 5,
+    name: "Ai Delle Whatsapp bot",
+    description:
+      "It was a fun project made for experiencing the open ai Dalle api",
+    technologies: ["Dalle", "ExpressJS", "whatapp-web.js"],
+    github: "https://github.com/Vikas-Yadav-07/whatapp-bot",
+    image: require(".//../../public/projects/whatsappbot.webp"),
+    available: true,
+  },
+  {
     id: 4,
     name: "Daze MGMT",
     description:
@@ -49,16 +59,6 @@ export const devProjects = [
     technologies: ["NextJS", "GSAP", "Strapi"],
     demo: "https://daze-mgmt.com/",
     image: require(".//../../public/projects/dazeMGMT.webp"),
-    available: true,
-  },
-  {
-    id: 5,
-    name: "Ai image genration whatapp bot",
-    description:
-      "It was a fun project made for expiriencing the open ai Dalle api",
-    technologies: ["Dalle", "ExpressJS", "whatapp-web.js"],
-    github: "https://github.com/Vikas-Yadav-07/whatapp-bot",
-    image: require(".//../../public/projects/whatsappbot.webp"),
     available: true,
   },
 ];
