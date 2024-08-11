@@ -2,15 +2,15 @@
 import Hero from "./hero-section/Hero";
 import useBlobity from "blobity/lib/react/useBlobity";
 import { useEffect } from "react";
-import { ScrollerMotion } from "scroller-motion";
 import PreLoader from "./animations/PreLoader/PreLoader";
 import { initialBlobityOptions } from "./utils/BlobityConfig";
 import NavBar from "./navbar/NavBar";
 
 import dynamic from "next/dynamic";
+import Lenis from "@studio-freight/lenis";
+import { cubicBezier } from "framer-motion";
 const Work = dynamic(() => import("./work-section/Work"));
 const About = dynamic(() => import("./about-section/About"));
-const Blog = dynamic(() => import("./timeline-section/BlogGrid"));
 const Contact = dynamic(() => import("./contact-section/Contact"));
 const Footer = dynamic(() => import("./footer/Footer"));
 
@@ -29,24 +29,35 @@ export default function Home() {
       top: 0,
       left: 0,
     });
+
+    const lenis = new Lenis({
+      easing: cubicBezier(0.76, 0, 0.24, 1),
+      syncTouch: true,
+    });
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    const animationFrame = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(animationFrame);
+    };
   }, []);
 
   return (
     <>
       <PreLoader />
-
       <NavBar />
-
-      {/* <ScrollerMotion> */}
       <main className="flex flex-col items-center justify-center">
         <Hero />
         <Work />
         <About />
-        <Blog />
         <Contact />
         <Footer />
       </main>
-      {/* </ScrollerMotion> */}
     </>
   );
 }
