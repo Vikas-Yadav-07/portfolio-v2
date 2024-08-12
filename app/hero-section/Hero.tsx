@@ -77,8 +77,7 @@ const Hero = () => {
           variants={bodyAnimation}
         >
           <p className="text-left text-[16px] font-semibold text-[#e4ded7] md:text-[20px]">
-            Currently building animated components that developers can use in
-            there React apps{" "}
+            Building{" "}
             <Link
               href="https://vianlix.com/ "
               target="_blank"
